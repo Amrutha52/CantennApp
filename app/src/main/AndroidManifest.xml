@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-feature android:name="android.hardware.camera" />
+
+<!--    <uses-permission-->
+<!--        android:name="com.google.android.gms.permission.AD_ID"-->
+<!--        tools:node="remove" />-->
+    <uses-permission android:name="android.permission-group.NEARBY_DEVICES" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" /> <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/LoginTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity"
+            android:theme="@style/LoginTheme"
+            />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".InvoiceActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".MyOrders"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Menu"
+            android:parentActivityName=".canteen.CanteenDashBoardActivity"/>
+        <activity android:name=".solofoodui.SelectedFood"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".canteen.CanteenViewOrderActivity"
+            android:parentActivityName=".canteen.CanteenDashBoardActivity"/>
+        <activity android:name=".canteen.CanteenDashBoardActivity"/>
+        <activity android:name=".admin.AdminDashBoardActivity"/>
+        <activity android:name=".admin.AdminAddUserActivity"
+            android:parentActivityName=".admin.AdminDashBoardActivity"/>
+        <activity android:name=".admin.AdminViewUser"
+            android:parentActivityName=".admin.AdminDashBoardActivity"/>
+    </application>
+
+</manifest>
